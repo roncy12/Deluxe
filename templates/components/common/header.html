@@ -1,0 +1,63 @@
+<a href="#main-content" class="skip-to-main-link">{{lang 'header.skip_to_main'}}</a>
+{{#if banners.top}}
+<div class="banners" data-banner-location="top">
+    {{#each (limit banners.top_metadata 1)}}
+    <div class="banner" data-event-type="promotion" data-entity-id="{{this.id}}" data-name="{{this.banner-name}}" data-position="{{this.location}}" data-banner-id="{{this.banner-name}}">
+        <div data-event-type="promotion-click">
+            {{{this.content}}}
+        </div>
+    </div>
+    {{/each}}
+</div>
+{{/if}}
+<header class="header" role="banner">
+    <a href="#" class="mobileMenu-toggle" data-mobile-menu-toggle="menu">
+        <span class="mobileMenu-toggleIcon">Toggle menu</span>
+    </a>
+
+    <div class="header-container">
+        {{#if page_type '===' 'default'}}
+            <h1 class="header-logo header-logo--{{theme_settings.logo-position}}">
+                {{> components/common/store-logo}}
+            </h1>
+        {{else}}
+            <div class="header-logo header-logo--{{theme_settings.logo-position}}">
+                {{> components/common/store-logo}}
+            </div>
+        {{/if}}
+        <div class="search-container">
+            {{> components/common/search-box}}
+        </div>
+        <div class="customer-service">
+            <div>
+                <span><b>Talk to a Scooter Expert</b></span>
+                <h4>1-888-383-8824</h4>
+            </div>
+            <div>
+                <img src="{{cdn 'https://cdn11.bigcommerce.com/s-x15udurmx6/product_images/uploaded_images/girl-ontalk.png'}}" alt="Girl with telephone" id="on-talk">
+            </div>
+            <div>
+                <span><b>Sales</b>: 8am - 9pm (Mon - Fri EST)</span><br/>
+                <span>9am - 6pm (Sat - Sun EST)</span><br/>
+                <span><b>Customer Service</b>: 9am - 5pm <br/> (Mon - Fri EST)</span>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    
+
+    <div class="navigationCon">
+        <div class="navPages-container" id="menu" data-menu>
+            {{> components/common/navigation-menu}}
+            
+        </div>
+        <div class="navUser-div">
+            {{> components/common/navigation}}
+        </div>
+    </div>
+</header>
+{{{region name="header_bottom--global"}}}
+{{{region name="header_bottom"}}}
