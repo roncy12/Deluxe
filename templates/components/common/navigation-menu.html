@@ -15,6 +15,9 @@
         {{/each}}
         {{#unless theme_settings.hide_content_navigation}}
             {{#each pages}}
+                {{#if name '==' 'Contact Us'}}
+
+                {{else}}
                  <li class="navPages-item navPages-item-page">
                      <a class="navPages-action{{#if name '==' ../page.title}} activePage{{/if}}"
                         href="{{url}}"
@@ -23,31 +26,9 @@
                          {{name}}
                      </a>
                  </li>
+                {{/if}}
              {{/each}}
         {{/unless}}
-        <li class="navPages-item">
-        <nav class="navUser">
-            <ul class="navUser-section navUser-section--alt">
-                <li class="navUser-item navUser-item--cart">
-                    <a class="navUser-action"
-                       data-cart-preview
-                       data-dropdown="cart-preview-dropdown"
-                       data-options="align:right"
-                       href="{{urls.cart}}"
-                       aria-label="{{lang 'cart.nav_aria_label'}}"
-                    >
-                        <span class="navUser-item-cartLabel">{{lang 'common.cart'}}</span>
-                        <span class="countPill cart-quantity"></span>
-                    </a>
-                </li>
-            </ul>
-
-        </nav>
-        <div class="dropdown dropdown--quickSearch" id="quickSearch" aria-hidden="true" data-prevent-quick-search-close>
-            {{> components/common/quick-search name='nav-quick-search'}}
-        </div>
-        </li>
-
     </ul>
     <ul class="navPages-list navPages-list--user">
         {{#if currency_selector.currencies.length '>' 1}}
