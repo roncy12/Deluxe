@@ -22,6 +22,7 @@
         width: 85%;
         margin: 0 auto;
         justify-content: space-between;
+        padding: 1rem 0 0;
     }
 }
 .customer-service div h4 {
@@ -41,12 +42,16 @@
     }
 }
 .search-container .form-prefixPostfix.wrap{
-    border: 1px solid #312F30;
+    border: 2px solid #312F30;
     border-radius: 25px;
 }
 .search-container .form-prefixPostfix .form-input{
     border-radius: 25px;
     border-width: 0;
+    font-size: 18px;
+    font-family: 'Karla';
+    padding: 0.75rem 1rem 0.75rem 1.5rem;
+    height: 3.2rem;
 }
 
 .search-container .form-prefixPostfix .button{
@@ -59,8 +64,32 @@
     border: 0;
 }
 img#on-talk {
-    max-width: 75px;
-    margin: 1rem 0 0;
+    max-width: 85px;
+    margin: 1rem 2.5rem 0 1rem;
+}
+
+.customer-service div span {
+    font-size: 18px;
+    letter-spacing: 0px;
+    line-height: 1;
+}
+span#custm-srvc {
+    margin: 0.5rem 1.5em 0 0;
+    display: inline-block;
+}
+#talk {
+    font-weight: bold;
+    font-family: 'Karla';
+    margin: 0 0 0.4rem;
+    letter-spacing: 1px;
+    font-size: 14px;
+    -webkit-text-stroke: thin;
+}
+.customer-service div h4 {
+    margin: 0;
+    font-family: 'Karla';
+    font-size: 24px;
+    font-weight: 500;
 }
 // BreadCrumbs
 ol.breadcrumbs{text-align: left;}
@@ -414,7 +443,9 @@ dt.productView-info-name {
     }
     label#Product_spec p {
         margin: 0 0 0.5rem;
-        font-size: 18px;
+        font-size: 22px;
+        font-weight: 800;
+        font-family: 'Karla';
     }
 }
 
@@ -457,6 +488,7 @@ h2.productView-brand {
 }
 .call-us-section span {
     font-weight: 600;
+    font-size: 16px;
 }
 
 .call-us-section span b {
@@ -544,4 +576,10 @@ input#form-action-addToCart {
 
     .navBg {
         background: #312F30;
+    }
+
+    .call-us-section {
+        padding: 1rem 0;
+        text-align: center;
+        background: #F18835;
     }
