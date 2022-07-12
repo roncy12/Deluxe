@@ -59,7 +59,7 @@ If you are making a change here or in price-range.html, you probably want to mak
             </span>
         </div>
         <div class="price-section price-section--withoutTax non-sale-price--withoutTax{{#if price.with_tax}} price-section--minor{{/if}}" {{#unless price.non_sale_price_without_tax}}style="display: none;"{{/unless}}>
-            <span>
+            <span id="was-label">
                 {{> components/products/price-label
                     label_value=theme_settings.pdp-non-sale-price-label
                     fallback=(lang "page_builder.pdp-non-sale-price-label")

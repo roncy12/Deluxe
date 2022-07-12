@@ -1,4 +1,9 @@
-{{#each product.custom_fields}}
-<dt class="productView-info-name">{{name}}:</dt>
-<dd class="productView-info-value">{{{value}}}</dd>
+<table id="quick-specs">
+{{#each (limit product.custom_fields 5)}}  
+    <tr>
+        <td><dt class="productView-info-name">{{name}}:</dt></td>
+        <td><dd class="productView-info-value">{{{value}}}</dd></td>  
+    </tr>
+
 {{/each}}
+</table>

@@ -89,6 +89,11 @@
                 {{/if}}
             {{/if}}
         </li>
+        <li class="navUser-item">
+            <a class="navPages-action" href="/contact-us/" aria-label="Contact Us">
+                Contact Us
+            </a>
+        </li>
         <li class="navUser-item navUser-item--cart">
             <a class="navUser-action"
                data-cart-preview
@@ -97,7 +102,7 @@
                href="{{urls.cart}}"
                aria-label="{{lang 'cart.nav_aria_label'}}"
             >
-                <span class="navUser-item-cartLabel">{{lang 'common.cart'}}</span>
+                <span class="navUser-item-cartLabel">{{lang 'common.cart'}}<img src="{{cdn 'https://cdn11.bigcommerce.com/s-b6salw7r81/product_images/uploaded_images/cart-icon.png'}}"></span>
                 <span class="countPill cart-quantity"></span>
             </a>
 

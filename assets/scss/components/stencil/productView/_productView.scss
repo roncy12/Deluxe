@@ -137,7 +137,7 @@
 
 .productView-product {
     @include breakpoint("medium") {
-        border-bottom: container("border");
+        // border-bottom: container("border");
         padding-bottom: spacing("single") + spacing("third");
     }
 
